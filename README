@@ -1,0 +1,37 @@
+Last Updated: 11.07.2011
+
+The MBTATracker application is an Enyo webOS-based app that runs on HP Touchpad.
+The basic use-case for the application is as follows:
+
+1. Launch the app
+2. app requests the Palm Location Service for current GPS location
+3. app zooms Microsoft Bing map to appropriate zoom level for current location
+4. app reaches out to NextBus webservice and queries for lat/lon position of all moving buses
+5. app receivces response from webservice and renders all buses as pushpins on the map
+6. user has options to filter display by specific bus lines
+
+Future work:
+
+Make push-pins clickable:  When user clicks, info balloon is displayed that shows more information about that bus:  Bus #, Current Speed, Current Heading, etc...
+
+Render all bus stops in different colors:  North Bound vs. South Bound, etc...
+
+Use the NextBus Service to query for predicated arrival times.
+
+The service is @ 
+
+url: "http://webservices.nextbus.com/service/publicXMLFeed?command=vehicleLocations&a=mbta&t=0",
+This is an HTTP GET Request, which can also be pulled with curl:
+
+curl <URL>
+
+
+with the xml output:
+
+
+<vehicle id="0889" routeTag="455" dirTag="455_1_var8" lat="42.466605" lon="-70.94196" secsSinceReport="113" predictable="true" heading="216" speedKmHr="0.0"/>
+<vehicle id="1212" routeTag="28" dirTag="28_1_var2" lat="42.3342113" lon="-71.0899042" secsSinceReport="38" predictable="true" heading="54" speedKmHr="0.0"/>
+
+
+
+ 
