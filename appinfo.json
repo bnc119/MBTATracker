@@ -1,0 +1,9 @@
+{
+  "id": "com.palm.helloworld",
+  "version": "1.0.0",
+  "vendor": "Bence Magyar",
+  "type": "web",
+  "main": "index.html",
+  "title": "HelloWorld",
+  "uiRevision": "2"
+}

@@ -1,0 +1,13 @@
+{
+  "returnValue": "true",
+  "schema":  {
+       "latitude": "lat",
+       "longitude": "lon"
+  },
+  
+  "results":  
+  {
+     "latitude": "42.415278",
+     "longitude": "-71.156944"
+  }
+}
